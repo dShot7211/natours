@@ -1,0 +1,83 @@
+1- replace('<PASSWORD>', process.env.PASSWORD); replace a word in string
+The replace() method searches a string for a value or a regular expression.
+
+The replace() method returns a new string with the value(s) replaced.
+
+The replace() method does not change the original string.
+
+2- Object.assign({ id: newId }, req.body);
+method is used to copy the values and properties from one or more source objects to a target object. 
+makes an obj which has id = newId and all the req body
+
+3- multiply a string which is a number with one to convert it into number.
+
+4-
+ intourcontroller
+ queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
+
+ SPLIT A STRING 
+  const splittedArry = value[0].name.split(".");
+
+5-  chat way of removing fields not in the schema as done above
+     In this way we can get the values if they exist and if they not they will be stored as undefined.
+     All the values that weren't destructured in any variable (the rest of the query fields) will be stored in the queryObj
+     const { page, sort, limit, fields, ...queryObj } = req.query;
+
+
+     find out only keys, or only values of the object 
+      const value = Object.keys(err);
+      const value = Object.values(err);
+
+
+      getTime() gives us time in miliseconds
+       this.passwordChangedAt.getTime() / 1000, // converted
+
+
+     object looping in the user controller and return a new obj with filters keys 
+
+
+     clone an object  
+     const = oldObj; 
+     let newClone = { ...oldObj}
+
+     convert  date into string
+     en-us is the language 
+     toLocaleString('en-us',{month: 'long', year: 'numeric'} )
+
+
+
+     destructure an object and give it an alias
+fName, lName = are the aliases
+     const {firstName: fName, lastName: lName} = user
+
+     if the obj has an obj as well
+     const user = {
+      name: 'Avi',
+      Address: {
+      block: 'D-1',
+      sector: '88',
+                    }
+     }
+
+     const {Address: {block, sector}} = user;
+
+
+
+  THE REST Operator
+
+  const cm = ['Y. S. Jagan Mohan Reddy', 'Pema Khandu', 'Himanta Biswa Sarma', '	Pramod Sawant', 'Bhupendrabhai Patel']
+
+  const [Andra,second, ...rest] 
+  ...rest we are collecting the rest of the values
+  rest will contain all the other cm's [ 'Himanta Biswa Sarma', '	Pramod Sawant', 'Bhupendrabhai Patel']
+
+
+  THE NEW ES6 THINGS
+   at() method find the element at the exact spot
+
+   const numbers = [12, 13, 14]
+   const channel = 'coding addict'
+   works on string as well
+numbers.at(-1) // last  -means the from the last
+1 means start from the start
